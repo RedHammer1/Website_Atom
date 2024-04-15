@@ -1,0 +1,334 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    max-width: 100%;
+
+    background: whitesmoke;
+
+    display: flex;
+    flex-direction: column;
+    
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+
+  
+}
+
+
+.main {
+    width: 100%;
+    height: 501px;
+    
+
+
+    background-image: url(head.png);
+    background-repeat: round;
+    background-size: cover;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: rgb(0, 100, 100);
+
+    text-shadow: 2px 2px 4px #18add3;
+    
+
+}
+
+.main>div {
+    background-color: rgba(50, 50, 50, 0.7);
+    display: flex;
+    padding: 20px 5px;
+
+    align-items: center;
+
+}
+
+header {
+    width: 100%;
+    height: 120px;
+    z-index: 2;
+    font-weight: bolder;
+}
+
+.list,
+.search {
+    border: none;
+    background: none;
+}
+
+.list:hover,
+.search:hover {
+    background: red;
+}
+
+
+
+
+header>div {
+    padding: 10px;
+    
+}
+
+header>div>ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#fadeshow {
+    display: flex;
+    flex-shrink: 5;
+    flex-basis: 5;
+}
+
+.logo,
+.list,
+.search {
+    display: flex;
+    flex-shrink: 1;
+    flex-basis: 20;
+}
+
+ul {
+    list-style: none;
+}
+
+
+
+
+@media only screen and (max-width: 900px) {
+    #fadeshow {
+        display: none;
+
+
+    }
+}
+
+.body {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+
+
+}
+
+.b {
+    width: 100%;
+    padding: 60px;
+    max-width: 600px;
+
+    
+}
+
+main>ul {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    
+
+}
+
+main>ul>li {
+    animation: blink-caret_aricle 0.8s ease-in-out;
+    
+    background-color: rgba(105, 105, 105, 0.281);
+}
+@keyframes article_is_hover {
+    from {
+        
+        transform: scale(100%);
+        
+    }
+
+    to {
+        transform: scale(105%);
+    }
+}
+
+main>ul>li, aside, .main> div
+{
+    border-radius: 15px;
+}
+
+.article > img
+{
+    border-color: #5c5c5c2c;
+    border-style: groove;
+}
+
+
+
+
+@keyframes blink-caret_aricle {
+    from {
+        
+        transform: scale(0);
+        
+    }
+
+    to {
+        transform: scale(100%);
+    }
+}
+
+.article {
+
+    
+    max-width: 600px;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 20px;
+    
+
+   
+    animation-fill-mode: forwards;
+}
+.article > p
+{
+    background-color: rgba(104, 104, 105, 0.219);
+    
+    padding: 10px;
+}
+
+
+
+aside {
+    margin: 60px 60px 60px 0px;
+    padding: 25px;
+    
+    width: 50%;
+    max-width: 300px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    animation: blink-caret 0.8s ease-in-out;
+    transform-origin:right center;
+
+
+    animation-fill-mode: forwards;
+    text-align: center;
+    
+    
+
+}
+
+@media only screen and (max-width: 700px) {
+    #fadeshow2 {
+        display: none;
+
+    }
+}
+
+
+@keyframes blink-caret {
+    from {
+        background-color: transparent;
+        color: transparent;
+        transform: scaleY(0%);
+        
+
+    }
+
+    to {
+        background-color: rgba(150, 150, 150, 0.5);
+        color: black;
+        transform: scalY(100%);
+        
+    }
+}
+
+
+.border {
+    border-right: 0px;
+    border-left: 0px;
+    border-bottom: 0px;
+    border-top: 10px;
+    border-style: ridge;
+    border-color: rgba(128, 128, 128, 0.329);
+}
+
+
+aside>ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1.5;
+
+
+}
+
+aside>h3 {
+    line-height: 3;
+}
+
+
+
+footer {
+    max-width: 100%;
+
+    background-color: rgba(122, 122, 122, 0.8);
+
+    z-index: 2;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    padding: 30px auto;
+
+
+}
+
+.soc_array {
+    padding: 20px;
+}
+.soc_array> div
+{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+@keyframes blink-caret_A {
+    
+    from
+    {
+        color: rgba(3, 154, 255, 0.877);
+    }
+    to {
+        color: rgb(100, 4, 4);
+    }
+}
+
+a:link {
+    text-decoration: none;
+    color: rgb(3, 154, 255);
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    animation: blink-caret_A 0.8s ease-in-out;
+    animation-fill-mode: forwards;
+    text-decoration: none;
+    
+    
+}
+
+
+
+a:active {
+    text-decoration: none;
+}
