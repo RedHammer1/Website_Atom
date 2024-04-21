@@ -10,18 +10,18 @@ body {
 
     display: flex;
     flex-direction: column;
-    
+
     font-family: Arial, Helvetica, sans-serif;
     overflow-x: hidden;
 
-  
+
 }
 
 
 .main {
     width: 100%;
-    height: 501px;
-    
+    height: 801px;
+
 
 
     background-image: url(head.png);
@@ -35,14 +35,14 @@ body {
     color: rgb(0, 100, 100);
 
     text-shadow: 2px 2px 4px #18add3;
-    
+
 
 }
 
 .main>div {
     background-color: rgba(50, 50, 50, 0.7);
     display: flex;
-    padding: 20px 5px;
+    padding: 10px 5px;
 
     align-items: center;
 
@@ -61,17 +61,13 @@ header {
     background: none;
 }
 
-.list:hover,
-.search:hover {
-    background: red;
-}
 
 
 
 
 header>div {
     padding: 10px;
-    
+
 }
 
 header>div>ul {
@@ -96,57 +92,75 @@ header>div>ul {
     flex-basis: 20;
 }
 
+.list_button {
+    display: none;
+    position: absolute;
+    top: 120px;
+    background-color: blanchedalmond;
+    width: 100%;
+    animation: blink-caret 0.2s ease-in-out;
+    animation-fill-mode: list_appereance;
+    transform-origin: top left;
+}
+@keyframes list_appereance {
+    from {
+
+        transform: scale(0);
+
+    }
+
+    to {
+        transform: scale(100%);
+    }
+}
+
+
 ul {
     list-style: none;
 }
 
-
-
-
 @media only screen and (max-width: 900px) {
     #fadeshow {
         display: none;
-
-
     }
 }
 
 .body {
-
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    
-
-
 }
 
 .b {
     width: 100%;
-    padding: 60px;
-    max-width: 600px;
-
+    padding: 60px 9px;
+    min-width: 200px;
     
+}
+
+.article_text
+{
+    white-space: nowrap; /* Текст не переносится */
+    overflow: hidden; /* Обрезаем всё за пределами блока */
+    text-overflow: ellipsis; /* Добавляем многоточие */
+    position: relative;
 }
 
 main>ul {
     display: flex;
     flex-direction: column;
     gap: 15px;
-    
-
 }
 
 main>ul>li {
     animation: blink-caret_aricle 0.8s ease-in-out;
-    
+
     background-color: rgba(105, 105, 105, 0.281);
 }
+
 @keyframes article_is_hover {
     from {
-        
         transform: scale(100%);
-        
     }
 
     to {
@@ -154,15 +168,17 @@ main>ul>li {
     }
 }
 
-main>ul>li, aside, .main> div
-{
+main>ul>li,
+aside,
+.main>div,
+.article>img {
     border-radius: 15px;
 }
 
-.article > img
-{
+.article>img {
     border-color: #5c5c5c2c;
     border-style: groove;
+    max-width: 600px;
 }
 
 
@@ -170,9 +186,9 @@ main>ul>li, aside, .main> div
 
 @keyframes blink-caret_aricle {
     from {
-        
+
         transform: scale(0);
-        
+
     }
 
     to {
@@ -182,44 +198,46 @@ main>ul>li, aside, .main> div
 
 .article {
 
-    
-    max-width: 600px;
+
+    max-width: 400px;
 
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     padding: 20px;
-    
 
-   
+
+
     animation-fill-mode: forwards;
 }
-.article > p
-{
+
+.article>p {
     background-color: rgba(104, 104, 105, 0.219);
-    
+
     padding: 10px;
 }
 
 
 
 aside {
-    margin: 60px 60px 60px 0px;
+    margin: 60px 9px 60px 0px;
     padding: 25px;
-    
+
     width: 50%;
     max-width: 300px;
     display: flex;
     flex-wrap: nowrap;
     flex-direction: column;
-    animation: blink-caret 0.8s ease-in-out;
-    transform-origin:right center;
+    
+    transform-origin: right center;
 
-
+    animation: blink-caret 1.0s ease-in-out;
     animation-fill-mode: forwards;
+
     text-align: center;
-    
-    
+    position: relative;
+
+
 
 }
 
@@ -235,7 +253,6 @@ aside {
     from {
         background-color: transparent;
         color: transparent;
-        transform: scaleY(0%);
         
 
     }
@@ -243,7 +260,6 @@ aside {
     to {
         background-color: rgba(150, 150, 150, 0.5);
         color: black;
-        transform: scalY(100%);
         
     }
 }
@@ -292,19 +308,19 @@ footer {
 .soc_array {
     padding: 20px;
 }
-.soc_array> div
-{
+
+.soc_array>div {
     display: flex;
     flex-wrap: wrap;
     gap: 25px;
 }
 
 @keyframes blink-caret_A {
-    
-    from
-    {
+
+    from {
         color: rgba(3, 154, 255, 0.877);
     }
+
     to {
         color: rgb(100, 4, 4);
     }
@@ -323,8 +339,8 @@ a:hover {
     animation: blink-caret_A 0.8s ease-in-out;
     animation-fill-mode: forwards;
     text-decoration: none;
-    
-    
+
+
 }
 
 
