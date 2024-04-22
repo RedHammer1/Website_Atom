@@ -1,4 +1,4 @@
-* {
+п»ї* {
     margin: 0;
     padding: 0;
 }
@@ -6,7 +6,8 @@
 body {
     max-width: 100%;
 
-    background: whitesmoke;
+    /* background: rgb(36, 87, 169); */
+    background-color: white;
 
     display: flex;
     flex-direction: column;
@@ -53,6 +54,10 @@ header {
     height: 120px;
     z-index: 2;
     font-weight: bolder;
+    background-color: rgb(191, 191, 191);
+    border-radius: 0 0 10px 10px;
+
+    
 }
 
 .list,
@@ -67,6 +72,7 @@ header {
 
 header>div {
     padding: 10px;
+    
 
 }
 
@@ -96,12 +102,26 @@ header>div>ul {
     display: none;
     position: absolute;
     top: 120px;
-    background-color: blanchedalmond;
+    background-color: rgb(240, 240, 240);
     width: 100%;
     animation: blink-caret 0.2s ease-in-out;
     animation-fill-mode: list_appereance;
     transform-origin: top left;
+    border-radius: 10px;
 }
+.list_button > div
+{
+    display: flex;
+    justify-content: space-between;
+}
+#search
+{
+    border: none;
+    border-radius: 5px;
+    min-width: 200px;
+    width: 100%;
+}
+
 @keyframes list_appereance {
     from {
 
@@ -140,9 +160,9 @@ ul {
 
 .article_text
 {
-    white-space: nowrap; /* Текст не переносится */
-    overflow: hidden; /* Обрезаем всё за пределами блока */
-    text-overflow: ellipsis; /* Добавляем многоточие */
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
     position: relative;
 }
 
