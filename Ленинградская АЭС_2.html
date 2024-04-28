@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="script.js"></script>
+    <title>Строящиеся АЭС</title>
+</head>
+
+<body>
+    <header>
+        <div>
+            <ul>
+                <li>
+                    <button class="list" type="button"
+                        onclick="showPopup('menu'); hidePopup('searchMenu'); hidePopup('search_list')">
+                        <picture>
+                            <img src="assets/icon/list.png" alt="ЛИСТ" width="50px" height="50px">
+                        </picture>
+                    </button>
+
+                </li>
+                <li id="fadeshow">
+                    <a href="site.html">ГЛАВНАЯ</a>
+                </li>
+
+                <li id="fadeshow">
+                    <a href="production.html">НАПРАВЛЕНИЯ ДЕЯТЕЛЬНОСТИ</a>
+                </li>
+                <li>
+                    <a title="Главная страница" href="site.html" class="logo">
+                        <picture>
+                            <img src="assets/icon/logo.png" alt="РОСАТОМ" width="100px" height="100px">
+                        </picture>
+                    </a>
+                </li>
+                <li id="fadeshow">
+                    <a href="career.html">КАРЬЕРА</a>
+                </li>
+
+                <li id="fadeshow">
+                    <a href="sustainability.html">УСТОЙЧИВОЕ РАЗВИТИЕ</a>
+                </li>
+                <li>
+                    <button class="search" type="button" onclick="showPopup('searchMenu'); hidePopup('menu')">
+                        <picture>
+                            <img src="assets/icon/search.png" alt="ПОИСК" width="50px" height="50px">
+                        </picture>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+
+
+    <div id="searchMenu" class="search_button">
+        <div>
+            <input type="text" id="search" onkeyup="SearchBox();" onclick="showFlexPopup('search_list');"
+                placeholder="Напишите, что вы ищите" title="Type">
+
+            <button type="button" onclick="hidePopup('search_list'); hidePopup('searchMenu');">
+                <picture>
+                    <img src="assets/icon/cancel.png" alt="ЛИСТ" width="50px" height="50px">
+                </picture>
+            </button>
+
+        </div>
+
+        <ul id="search_list" class="search_list">
+            <li><a href="Курская АЭС.html">Курская АЭС-2</a></li>
+
+            <li><a href="Смоленская_АЭС-2.html">Смоленская АЭС-2</a></li>
+            <li><a href="Кольская АЭС.html">Кольская АЭС</a></li>
+
+            <li><a href="Нижегородская АЭС.html">Нижегородская АЭС</a></li>
+            <li><a href="Белоярская_АЭС.html">Белоярская АЭС</a></li>
+
+            <li><a href="site.html">Главная</a></li>
+            <li><a href="production.html">Направления деятельности</a></li>
+            <li><a href="career.html">Карьера</a></li>
+            <li><a href="sustainability.html">Устойчивое развитие</a></li>
+
+        </ul>
+
+    </div>
+
+    <div id="menu" class="search_list">
+        <ul onmouseout="hidePopup('menu')" onmouseover="showPopup('menu')">
+            <ul>
+                <li><a href="Курская АЭС.html">Курская АЭС-2</a></li>
+
+                <li><a href="Смоленская_АЭС-2.html">Смоленская АЭС-2</a></li>
+                <li><a href="Кольская АЭС.html">Кольская АЭС</a></li>
+
+                <li><a href="Нижегородская АЭС.html">Нижегородская АЭС</a></li>
+                <li><a href="Белоярская_АЭС.html">Белоярская АЭС</a></li>
+            </ul>
+            <ul>
+                <li><a href="site.html">Главная</a></li>
+                <li><a href="production.html">Направления деятельности</a></li>
+                <li><a href="career.html">Карьера</a></li>
+                <li><a href="sustainability.html">Устойчивое развитие</a></li>
+            </ul>
+        </ul>
+    </div>
+
+    <div class="main">
+
+        <div>
+            <h1>Ленинградская АЭС-2</h1>
+        </div>
+
+    </div>
+
+    <div class="body">
+        <main>
+            <ul>
+                <li class="article_AES">
+
+                    <img src="assets/АЭС/Ленинградская_АЭС-2.png" alt="Ленинградская АЭС-2" width="100%" height="200px">
+                    <div>
+
+
+                        <p>Энергоблоки № 7 и № 8 Ленинградской АЭС-2 с
+                        реакторами ВВЭР-1200 сооружаются для замещения
+                        энергоблоков № 3 и № 4 с реакторами РБМК-1000. Их
+                        сооружение предусмотрено Генеральной схемой
+                        размещения объектов электроэнергетики до 2035 года,
+                        утвержденной распоряжением Правительства РФ от
+                        09.06.2017 № 1209-р. Застройщик - технический
+                        заказчик объекта – АО «Концерн Росэнергоатом»,
+                        генеральный проектировщик - АО «Атомэнергопроект»,
+                        главный конструктор реакторной установки - АО «ОКБ
+                        «Гидропресс», научный руководитель - НИЦ
+                        «Курчатовский институт».</p>
+                        <p>В соответствии с «дорожной
+                        картой» ввод блоков замещения в работу запланирован
+                        на 2030 и 2032 годы соответственно. В августе 2022
+                        года на стройплощадке блоков № 3 и № 4 Ленинградской
+                        АЭС-2 начались работы подготовительного периода,
+                        включая лесосечные работы, расчистку территории и
+                        т.д. Ведется подготовка к началу сооружения двух
+                        первоочередных объектов - трансформаторной
+                        подстанции 110/10 кВ и объединенной насосной станции
+                        противопожарного водоснабжения и автоматического
+                        пожаротушения.</p> 
+                        <p>Они должны обеспечить надежное
+                        электроснабжение строительной площадки и
+                        гарантировать пожарную безопасность при проведении
+                        работ. В ближайшее время будут обустроены подъездные
+                        внеплощадочные дороги, выполнены временные
+                        внеплощадочные сети канализации, теплоснабжения и
+                        водоснабжения, а также вертикальная планировка
+                        участка и разработка грунта котлованов, с тем чтобы
+                        уже в начале 2024 года можно было приступить к
+                        первому ключевому событию - началу бетонирования
+                        фундамента здания реактора энергоблока № 3
+                        Ленинградской АЭС-2. Первые два блока второй очереди
+                        станции с реакторами ВВЭР-1200 были введены в
+                        промышленную эксплуатацию в 2018 и 2021 годах.
+                        Проектный срок их службы составляет 60 лет, с
+                        возможностью продления еще на 20 лет. Ежесуточная
+                        выработка каждого нового энергоблока ВВЭР-1200
+                        составит около 28 миллионов киловатт-часов
+                        электроэнергии. За весь период предусмотренной
+                        проектом эксплуатации блок выдаст в единую
+                        энергосистему страны более 450 миллиардов кВт.ч
+                        электроэнергии.</p>
+
+                    </div>
+
+                </li>
+
+            </ul>
+        </main>
+
+        <aside id="fadeshow2">
+            <h3>Атомные станции</h3>
+            <ul class="border">
+                <li>
+                    <a href="Курская АЭС.html">
+                        Курская_АЭС-2
+                    </a>
+                </li>
+                <li>
+                    <a href="Смоленская_АЭС-2.html">
+                        Смоленская АЭС-2
+                    </a>
+                </li>
+                <li>
+                    <a href="Кольская АЭС.html">
+                        Кольская АЭС
+                    </a>
+                </li>
+                <li>
+                    <a href="Нижегородская АЭС.html">
+                        Нижегородская АЭС
+                    </a>
+                </li>
+                <li>
+                    <a href="Белоярская_АЭС.html">
+                        Белоярская АЭС
+                    </a>
+                </li>
+            </ul>
+        </aside>
+    </div>
+
+    <footer>
+        <div>
+            <h1>Наши партнёры</h1>
+            <div>
+                <a href="https://atomdoc.ru/">
+                    <img src="assets/Партнеры/АТОМДОК.png" alt="АТОМДОК" width="75px" height="75px">
+                </a>
+
+                <a href="https://ioes.ru/ru/">
+                    <img src="assets/Партнеры/ОЭСТРОЙ.png" alt="ОЭСТРОЙ" width="125px" height="75px">
+                </a>
+
+                <a href="https://www.res-e.ru/">
+                    <img src="assets/Партнеры/РЭС.png" alt="РЭС" width="125px" height="75px">
+                </a>
+
+                <a href="https://www.radcontrol.pro/">
+                    <img src="assets/Партнеры/Ч-М центр.png" alt="Ч-М" width="75px" height="75px">
+                </a>
+            </div>
+        </div>
+
+        <div>
+            <h1>Следите за нами </h1>
+            <div>
+                <a href="https://vk.com/">
+                    <img src="assets/Соцсети/vk.png" alt="vk" width="35px" height="35px">
+                </a>
+
+                <a href="https://ok.ru/">
+                    <img src="assets/Соцсети/одноклассники.png" alt="одноклассники" width="35px" height="35px">
+                </a>
+
+                <a href="https://www.youtube.com/">
+                    <img src="assets/Соцсети/youtube.png" alt="youtube" width="35px" height="35px">
+                </a>
+
+                <a href="https://rutube.ru/">
+                    <img src="assets/Соцсети/rt.png" alt="rt" width="35px" height="35px">
+                </a>
+
+                <a href="https://web.telegram.org/">
+                    <img src="assets/Соцсети/telegram.png" alt="telegram" width="35px" height="35px">
+                </a>
+
+                <a href="https://dzen.ru/">
+                    <img src="assets/Соцсети/yd.png" alt="yd" width="35px" height="35px">
+                </a>
+            </div>
+        </div>
+        <div>
+            <p>
+                © 2008–2024. Все права защищены. Государственная корпорация по
+                атомной энергии «Росатом»
+                При использовании материалов ссылка на сайт www.rosatom.ru
+                обязательна
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>
