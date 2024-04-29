@@ -233,7 +233,7 @@ main {
 
     height: 200px;
     color: #171581;
-    transform: scale(85%);
+    transform: scaleY(85%) scaleX(95%);
 
 
     display: flex;
@@ -278,7 +278,8 @@ main>ul {
     gap: 20px;
 }
 
-main>ul>li {
+main>ul>li,
+.article_prod {
     animation: blink-caret_aricle 0.5s ease-in-out;
     box-shadow: #c7c7c7 4px 4px;
     background-color: rgba(105, 105, 105, 0.281);
@@ -295,6 +296,7 @@ main>ul>li {
 }
 
 main>ul>li,
+.article_prod,
 aside,
 .main>div,
 .article img {
@@ -384,59 +386,63 @@ aside,
 
 
 .article_prod {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    gap: 5px;
-    padding: 10px;
 
-    width: 100%;
-    max-width: 100%;
-    height: 100%;
+    --auto-grid-min-size: 16rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size), 1fr));
+    grid-gap: 1rem;
 
-
-
-    justify-content: start;
-
+    padding: 20px;
 }
 
-.article_prod>a {
+.article_prod a:hover
+{
+    transform: scale(105%);
+}
+.article_prod a {
     border-radius: 15px;
 
-    min-width: 50px;
-    min-height: 50px;
-
-    width: 100%;
-    height: 100%;
+    min-width: 150px;
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
     
-
-
 }
-
-.article_prod>a>h1,
-.article_prod>a>p {
-    margin-left: 35px;
+.article_prod a div
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
 }
-
-.article_prod>a>p {
-
-    margin-top: 100px;
+.article_prod img
+{
+    height: 100%;
+    width: 100%;
+    max-width: 100px;
+    
 }
 
 .article_prod .navpar01 {
-    background-color: rgb(94, 34, 190);
+    background-color: rgb(126, 91, 184);
+    box-shadow: rgb(99, 53, 109) 5px 5px;
 }
 
 .article_prod .navpar02 {
-    background-color: rgb(14, 35, 155);
+    background-color: rgb(192, 93, 93);
+    box-shadow: rgb(139, 68, 68) 5px 5px;
 }
 
 .article_prod .navpar03 {
-    background-color: rgb(7, 216, 111);
+    background-color: rgb(160, 140, 76);
+    box-shadow: rgb(121, 106, 57) 5px 5px;
 }
 
 .article_prod .navpar04 {
-    background-color: rgb(198, 2, 247);
+    background-color: rgb(124, 160, 78);
+    box-shadow: rgb(98, 126, 62) 5px 5px;
 }
 
 .article_carier {
@@ -446,6 +452,7 @@ aside,
     align-items: center;
     color: #0b3f53;
     gap: 30px;
+
 }
 
 .article_carier>p {
@@ -460,11 +467,10 @@ aside,
 
 }
 
-.article_carier>h2 {
-    
+.article_carier>h2,h3 {
+
     padding: 5px;
-    color:#303030
-    
+    color: #303030;
 }
 
 aside {
@@ -523,11 +529,14 @@ aside>ul {
     flex-direction: column;
     align-items: center;
     line-height: 1.5;
+    padding: 10px;
 
 }
 
+
 aside>h3 {
     line-height: 3;
+    
 }
 
 footer {
@@ -540,8 +549,7 @@ footer {
     padding: 30px auto;
 }
 
-footer h1
-{
+footer h1 {
     padding: 20px 0px;
 }
 
@@ -564,16 +572,7 @@ footer>div>p {
     text-align: center;
 }
 
-@keyframes blink-caret_A {
 
-    from {
-        color: rgba(3, 154, 255, 0.877);
-    }
-
-    to {
-        color: rgb(100, 4, 4);
-    }
-}
 
 a:link,
 a:visited,
@@ -583,10 +582,13 @@ a:active {
 }
 
 a:link {
-    color: rgb(3, 154, 255);
+    color: rgb(0, 68, 255);
+}
+a:visited
+{
+    color: rgb(87, 17, 2);
 }
 
 a:hover {
-    animation: blink-caret_A 0.8s ease-in-out;
-    animation-fill-mode: forwards;
+    color: rgb(78, 154, 173);
 }
