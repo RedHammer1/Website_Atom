@@ -17,16 +17,16 @@ body {
     .main {
         height: calc(100vw / 2);
     }
-  }
-  
-  @media (orientation: portrait) {
+}
+
+@media (orientation: portrait) {
     .main {
         height: calc(100vh / 2);
     }
-  }
+}
 
 .main {
-    
+
     width: 100%;
     background-image: url(head.png);
     background-repeat: round;
@@ -36,8 +36,8 @@ body {
     align-items: center;
     justify-content: center;
     border-radius: 0px 0px 25px 25px;
-    color: rgb(0, 100, 100);
-    text-shadow: 2px 2px 4px #18add3;
+    color: rgb(67, 212, 30);
+    text-shadow: 2px 2px 4px #013a04;
 }
 
 .main>div {
@@ -60,21 +60,36 @@ header {
 .search_list {
     border: none;
     background: none;
+
 }
 
 .search_list {
     display: none;
     border-radius: 0px 0px 15px 15px;
     flex-direction: column;
-    padding: 10px;
+
+
 
     line-height: 30px;
 }
 
 .search_list>ul {
+
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+}
+
+.search_list li {
+    padding: 5px 10px 5px 10px;
+}
+
+
+input[type=text] {
+    width: 200px;
+    padding: 10px;
+    margin: 10px;
+
 }
 
 
@@ -107,15 +122,25 @@ header>div>ul {
 .search_list,
 .search_button {
     display: none;
-    background-color: rgb(240, 240, 240);
+
     animation: list_appereance 0.2s ease-in-out;
     width: 100%;
     transform-origin: top center;
 }
 
-#search_list {
+.search_list {
+    background-color: rgb(240, 240, 240);
     position: sticky;
     top: 20px;
+}
+
+.search_button,
+.search_button button[type=button] {
+    background: transparent;
+}
+
+#search_list {
+    border-radius: 15px;
 }
 
 
@@ -201,12 +226,18 @@ main {
     overflow: hidden;
     text-overflow: ellipsis;
     position: relative;
+    text-indent: 15px;
 
     max-width: 800px;
     min-width: 0px;
-    margin-top: 20px;
+
     height: 200px;
-    color: #171581
+    color: #171581;
+    transform: scale(85%);
+
+
+    display: flex;
+    align-self: center;
 
 }
 
@@ -215,6 +246,7 @@ main {
         display: none;
 
     }
+
 }
 
 @media only screen and (max-width: 750px) {
@@ -222,6 +254,8 @@ main {
         display: block;
 
     }
+
+
 }
 
 @media only screen and (max-width: 560px) {
@@ -229,6 +263,7 @@ main {
         display: none;
 
     }
+
 }
 
 main>ul>li {
@@ -240,7 +275,7 @@ main>ul>li {
 main>ul {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 20px;
 }
 
 main>ul>li {
@@ -269,8 +304,10 @@ aside,
 .article img {
     border-color: #5c5c5c2c;
     border-style: groove;
-    max-width: 600px;
     min-width: 200px;
+
+    width: 100%;
+    height: 100%;
 }
 
 @keyframes blink-caret_aricle {
@@ -284,13 +321,21 @@ aside,
 }
 
 .article {
-    max-width: 400px;
+    max-width: 600px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    padding: 20px;
+    justify-content: space-around;
+    padding: 15px;
     animation-fill-mode: forwards;
-    
+    height: 100%;
+    width: 100%;
+
+}
+
+.article>h2 {
+    padding: 10px;
+    text-align: center;
 }
 
 .article_AES img {
@@ -300,7 +345,10 @@ aside,
     border-radius: 15px;
     max-width: 600px;
     min-width: 200px;
-    width: 400px
+
+    width: 100%;
+    height: 100%;
+
 }
 
 .article_AES {
@@ -342,19 +390,25 @@ aside,
     gap: 5px;
     padding: 10px;
 
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+
+
+
     justify-content: start;
 
 }
 
 .article_prod>a {
     border-radius: 15px;
-    max-width: 200px;
-    max-height: 200px;
+
     min-width: 50px;
     min-height: 50px;
 
-    width: 200px;
-    height: 200px;
+    width: 100%;
+    height: 100%;
+    
 
 
 }
@@ -390,7 +444,7 @@ aside,
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: #2b6981;
+    color: #0b3f53;
     gap: 30px;
 }
 
@@ -407,10 +461,10 @@ aside,
 }
 
 .article_carier>h2 {
-    background-color: rgb(175, 175, 175);
-    border-radius: 15px;
+    
     padding: 5px;
-    box-shadow: #777b7c 2px 2px;
+    color:#303030
+    
 }
 
 aside {
@@ -427,7 +481,7 @@ aside {
 
     animation: blink-caret 1.0s ease-in-out;
     animation-fill-mode: forwards;
-    
+
 
     text-align: center;
     position: relative;
@@ -444,13 +498,13 @@ aside {
         background-color: transparent;
         border-color: transparent;
         box-shadow: transparent 5px 5px;
-        
+
     }
 
     to {
         background-color: rgba(150, 150, 150, 0.5);
         box-shadow: #b5b5b6 5px 5px;
-        
+
         color: black;
     }
 }
@@ -484,6 +538,16 @@ footer {
     flex-flow: row wrap;
     justify-content: space-between;
     padding: 30px auto;
+}
+
+footer h1
+{
+    padding: 20px 0px;
+}
+
+footer img {
+    width: 100%;
+
 }
 
 footer>div {
