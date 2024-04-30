@@ -68,6 +68,7 @@ header {
     border-radius: 0px 0px 15px 15px;
     flex-direction: column;
 
+    
 
 
     line-height: 30px;
@@ -141,6 +142,9 @@ header>div>ul {
 
 #search_list {
     border-radius: 15px;
+
+    transform: scaleX(98%);
+    transform-origin: top center;
 }
 
 
@@ -390,6 +394,7 @@ aside,
     --auto-grid-min-size: 16rem;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size), 1fr));
+    
     grid-gap: 1rem;
 
     padding: 20px;
@@ -408,7 +413,11 @@ aside,
     flex-direction: column;
     justify-content: space-between;
     padding: 10px;
-    
+}
+
+.article_prod h1, .article_prod p
+{
+    color:white;
 }
 .article_prod a div
 {
@@ -441,8 +450,8 @@ aside,
 }
 
 .article_prod .navpar04 {
-    background-color: rgb(124, 160, 78);
-    box-shadow: rgb(98, 126, 62) 5px 5px;
+    background-color: rgb(77, 100, 46);
+    box-shadow: rgb(45, 58, 28) 5px 5px;
 }
 
 .article_carier {
