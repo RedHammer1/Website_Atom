@@ -228,7 +228,7 @@ main {
 .article_text {
     white-space: wrap;
     overflow: hidden;
-    text-overflow: ellipsis;
+  
     position: relative;
     text-indent: 15px;
 
@@ -364,7 +364,7 @@ aside,
     flex-direction: row;
     flex-wrap: wrap;
     padding: 30px;
-    animation-fill-mode: forwards;
+    
     gap: 20px;
 
     justify-content: center;
@@ -391,8 +391,9 @@ aside,
 
 .article_prod {
 
-    --auto-grid-min-size: 16rem;
+   
     display: grid;
+    --auto-grid-min-size: 16rem;
     grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size), 1fr));
     
     grid-gap: 1rem;
@@ -488,11 +489,6 @@ aside {
 
     width: 50%;
     max-width: 300px;
-    display: flex;
-    flex-wrap: nowrap;
-    flex-direction: column;
-
-    transform-origin: right center;
 
     animation: blink-caret 1.0s ease-in-out;
     animation-fill-mode: forwards;
